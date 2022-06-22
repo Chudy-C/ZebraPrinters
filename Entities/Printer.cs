@@ -13,5 +13,6 @@ namespace ZebraPrinters.Entities
         public string IpAddress { get; set; }
         public string MacAddress { get; set; }
         public string SerialNumber { get; set; }
+        public string Location { get; set; }
     }
 }

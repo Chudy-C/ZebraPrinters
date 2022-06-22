@@ -40,7 +40,8 @@ namespace ZebraPrinters
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ZebraPrinters", Version = "v1" });
             });
 
-            services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("https://localhost:7246/") });
+            //services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("https://localhost:44342/") });
+            services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("http://192.168.2.59:8060/") });
 
             services.AddDbContextPool<ZebraPrinterDbContext>(options =>
                 options.UseMySql(Configuration.GetConnectionString("UbuntuPrinterConnection"),

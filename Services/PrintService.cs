@@ -49,7 +49,7 @@ namespace ZebraPrinters.Services
         {
             try
             {
-                var response = await httpClient.GetAsync($"api/Printer/{department}");
+                var response = await httpClient.GetAsync($"api/Printer/GetPrinterByDepartment?department={department}");
                 if (response.IsSuccessStatusCode)
                 {
                     if (response.StatusCode == System.Net.HttpStatusCode.NoContent)

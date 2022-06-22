@@ -27,7 +27,8 @@ namespace ZebraPrinters.Data
                 IpAddress = "192.168.2.69",
                 MacAddress = "48:A4:93:8E:7C:9D",
                 SerialNumber = "D2J21305227",
-                Department = "DT"
+                Department = "DT",
+                Location = "Szczytno"
             });
         }
     }

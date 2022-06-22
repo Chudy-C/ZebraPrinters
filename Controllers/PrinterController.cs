@@ -42,8 +42,9 @@ namespace ZebraPrinters.Controllers
             }
         }
 
-        [HttpGet("{department}")]
-        public async Task<ActionResult<Printer>> GetPrinter(string department)
+        [Route("GetPrinterByDepartment")]
+        [HttpGet]
+        public async Task<ActionResult<Printer>> GetPrinterByDepartment(string department)
         {
             try
             {

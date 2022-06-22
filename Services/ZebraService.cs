@@ -25,7 +25,8 @@ namespace ZebraPrinters.Services
 
             using (FileStream tempFileStream = new FileStream(tempFilePath, FileMode.Create))
             {
-                byte[] labelBytes = GetLabelBytes(printerLanguage, labelString);
+                byte[] labelBytes = new byte[1024];
+                labelBytes = GetLabelBytes(printerLanguage, labelString);
                 tempFileStream.Write(labelBytes, 0, labelBytes.Length);
                 tempFileStream.Flush();
             }
